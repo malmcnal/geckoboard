@@ -1,0 +1,11 @@
+$json = file_get_contents('http://api.geonames.org/findNearbyPlaceNameJSON?lat=51.9877644&lng=-1.47866&username=demo');
+
+$data = json_decode($json,true);
+
+$Geonames = $data['geonames'][0];
+
+echo "<pre>";
+
+print_r($Geonames);
+
+exit;
